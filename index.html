@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+    body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f9ff; 
+        }
+    
+
+
+:root {
+    --primary-color: #3b82f6; 
+    --white-color: #ffffff;
+}
+
+
+
+
+.timeline {
+    position: relative; 
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--primary-color); 
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 10px 40px; 
+    position: relative;
+    width: 50%;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+
+.content {
+    padding: 20px 30px;
+    background-color: var(--white-color);
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 25px; 
+    z-index: 1;
+    border: 4px solid var(--primary-color);
+    background-color: white;
+}
+
+.right::after {
+    left: -10px;
+}
+
+.left::after {
+    right: -10px;
+}
+
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 32px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--white-color);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #ddd;
+}
+
+.right::before {
+    content: " ";
+    position: absolute;
+    top: 32px; 
+    left: 30px;
+    border: medium solid var(--white-color);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #ddd transparent transparent;
+}
+.khoanh {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+    #gallery{
+        
+     background-color: var(--light-bg-color);
+     
+     
+    }
+    .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+    </style>
+</head>
+<body>
+    <section id="schedule">
+            <div class="container">
+                <h2>Một Ngày Làm Xì Trum</h2>
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="content">
+                            <h3>09:00 - Bước Qua Cánh Cổng Ma Thuật</h3>
+                            <p>Hướng dẫn viên Tí Vụng Về sẽ đón bạn và mở ra con đường bí mật. Bạn sẽ nhận được một chiếc mũ Xì Trum để chính thức trở thành thành viên của làng.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="content">
+                            <h3>09:30 - Dạo Quanh Làng & Gặp Gỡ Dân Làng</h3>
+                            <p>Thăm nhà Tí Cha, ghé vườn của Tí Cô Nương và cẩn thận với món quà "bất ngờ" từ Tí Quậy.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="content">
+                            <h3>12:00 - Bữa Trưa Tại Nhà Tí Đô</h3>
+                            <p>Thưởng thức bữa tiệc Dâu Xì Trum thịnh soạn với súp, bánh mì và món bánh tart tráng miệng không thể quên.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="content">
+                            <h3>14:00 - Phiêu Lưu Buổi Chiều</h3>
+                            <p>Tham gia thử thách cùng Tí Lực Sĩ và học bài học cảnh giác về gã phù thủy Gargamel.</p>
+                        </div>
+                    </div>
+                     <div class="timeline-item left">
+                        <div class="content">
+                            <h3>17:30 - Lễ Hội Đom Đóm & Chia Tay</h3>
+                            <p>Chiêm ngưỡng khung cảnh huyền ảo và nhận một món quà lưu niệm từ Tí Cha trước khi trở về.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+           <div class="khoanh">
+                 <h2>Thư Viện Ảnh Kỳ Diệu</h2>
+                 <div class="gallery-grid">
+                     <img src="toancanhlang.png" >
+                     <img src="nhanam.png" >
+                     <img src="buatiec.png" >
+                     <img src="dukhach.png" >
+                     <img src="rung.png">
+                     <img src="vuive.png">
+                 </div>
+            </div>
+        </section>
+        <section class="container">
+            <h2 style="text-align: center; ">Đặt tour ngay</h2>
+            <form class="row g-3">
+  <div class="col-md-12">
+    <label for="inputEmail4" class="form-label">Họ và tên</label>
+    <input type="email" class="form-control" id="inputEmail4" placeholder="nhập họ và tên">
+  </div>
+  
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Email</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="nhập email">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Số Điện Thoại:</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Nhập số điện thoại">
+  </div>
+  <div class="col-md-12">
+    <label for="inputCity" class="form-label">Chọn ngày mong muốn tham gia</label>
+    <input type="date" class="form-control" id="inputCity">
+  </div>
+  <div class="col-md-12">
+    <label for="inputState" class="form-label">Lời nhắn</label>
+    <div >
+        <textarea name="" id="" rows="10" cols="170"></textarea>
+    </div>
+    
+  </div>
+ 
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary btn-lg w-100" >Gửi yêu cầu</button>
+  </div>
+</form>
+        </section>
+</body>
+</html>
